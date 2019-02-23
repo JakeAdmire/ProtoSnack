@@ -7,14 +7,19 @@ export default class Nav extends Component {
     this.state = { currentCard: 0 };
   }
   switchCards = (event) => {
+    if (event.target.classList.contains("left")) {
+    console.log('left'); 
+  } else {
+    console.log('right');
+  }
     // if event className === left, setState({currentCard: currentCard-1})
     // else setState({currentCard: currentCard+1})
   }
   render() {
     return (
-      <div>
-        <div onClick={this.switchCards} className="left"></div>
-        <div onClick={this.switchCards} className="right"></div>
+      <div className="nav">
+        <button onClick={this.switchCards} className="left"></button>
+        <button onClick={this.switchCards} className="right"></button>
       </div>
       )
   }
