@@ -8,13 +8,18 @@ import Answers from './Answers.js';
 export default class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { 
+      userName: 'User',
+      completion: 0
+      };
   }
   render() {
     return (
       <div className="App">
         <Welcome />
-        <Header />
+        <Header  userName={this.state.userName}
+                  completion={this.state.completion}
+                  />
         <Nav />
         <Main />
         <Answers />

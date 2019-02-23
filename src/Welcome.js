@@ -7,6 +7,7 @@ export default class Welcome extends Component {
     this.state = { firstTime: true };
   }
   render() {
+    console.log(this.state.firstTime);
     let welcomeHeader = this.state.firsTime ? "Welcome to ProtoCards!" : "Welcome back to ProtoCards!";
     let welcomeTitle = this.state.firstTime ? "We see that this is your first time here!" : "We've missed you!";
     let welcomeDescript = this.state.firstTime ? "ProtoCards is an app for practicing your basic JavaScript string and array prototypes!" : "ProtoCards remembered your progress while you were away!";
