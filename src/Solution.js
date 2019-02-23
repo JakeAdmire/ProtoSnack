@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 
 
 export default class Solution extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
   }
   render() {
     return (
-      <div>Solution</div>
+      <div>
+        <button>{this.props.answer}</button>
+      </div>
       )
   }
 }

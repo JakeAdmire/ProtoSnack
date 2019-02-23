@@ -24,7 +24,7 @@ export default class App extends Component {
                   />
         <Nav />
         <Main cards={flashCards}/>
-        <Answers />
+        <Answers answers={prototypes}/>
       </div>
     );
   }

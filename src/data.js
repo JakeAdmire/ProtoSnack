@@ -79,10 +79,6 @@ const prototypes = [
     "data-type": "array",
     "description": "The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array."
   },
-  { "name": "slice",
-    "data-type": "array",
-    "description": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified."
-  },
   { "name": "splice",
     "data-type": "array",
     "description": "The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements."
