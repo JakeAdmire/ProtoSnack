@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 
 
 export default class Card extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
   }
   render() {
     return (
-      <div>Card</div>
+      <div>
+        <h1>{this.props.flashcard.proplem}</h1>
+        <h2>{this.props.flashcard.snippet}</h2>
+      </div>
       )
   }
 }

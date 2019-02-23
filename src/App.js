@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { prototypes, flashCards } from './data.js';
+// 
 import Welcome from './Welcome.js';
 import Header from './Header.js';
 import Nav from './Nav.js';
@@ -21,7 +23,7 @@ export default class App extends Component {
                   completion={this.state.completion}
                   />
         <Nav />
-        <Main />
+        <Main cards={flashCards}/>
         <Answers />
       </div>
     );

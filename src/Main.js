@@ -5,7 +5,11 @@ import Card from './Card.js';
 export default function Main(props) {
   return (
     <div>
-      <Card />
+      {
+        props.cards.map((card) => {
+          return <Card flashcard={card}/>
+        })
+      }
     </div>
     )
 }
