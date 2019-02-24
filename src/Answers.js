@@ -10,7 +10,7 @@ export default function Answers(props) {
   };
   console.log(answersArray);
   return (
-    <div>
+    <div className="answers">
       {answersArray.map((answer) => {
         return <Solution  answer={answer.name}
                           />

@@ -8,7 +8,7 @@ export default class Solution extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="solution">
         <button>{this.props.answer}</button>
       </div>
       )

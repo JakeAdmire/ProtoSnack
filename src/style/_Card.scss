@@ -1,0 +1,16 @@
+.card {
+  width: 200px;
+  height: 250px;
+  border: solid black 2px;
+  text-align: center;
+  @include flex(space-around, column, center);
+  flex: 0 0 auto;
+  //
+  // display: none;
+  h1 {
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+}

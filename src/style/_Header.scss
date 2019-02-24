@@ -1,0 +1,14 @@
+.header {
+  height: 100px;
+  border: solid black 2px;
+  background: white;
+  @include position(fixed, 0, 0, initial, 0);
+  @include flex(center, row, center);
+  p:nth-child(2) {
+    @include position(absolute, 0, 20px, initial, initial);
+  }
+  p:last-child {
+    @include position(absolute, initial, 20px, 0, initial);
+  }
+}
+
