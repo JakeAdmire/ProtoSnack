@@ -12,8 +12,12 @@ export default class App extends Component {
     super();
     this.state = { 
       userName: 'User',
-      completion: 0
+      completion: 0,
+      cardNumber: 0
       };
+  }
+  resetState = (state) => {
+    this.setState(state);
   }
   render() {
     return (
@@ -22,9 +26,10 @@ export default class App extends Component {
         <Header  userName={this.state.userName}
                   completion={this.state.completion}
                   />
-        <Nav />
-        <Main cards={flashCards}/>
-        <Answers answers={prototypes}/>
+        <Main cards={flashCards}
+              resetState={this.resetState}/>
+        <Answers  answers={prototypes}
+                  correctAnswer={flashCards[this.state.cardNumber].solutionPrototype}/>
       </div>
     );
   }
