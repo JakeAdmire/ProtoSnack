@@ -13,15 +13,33 @@
   h2 {
     font-size: 12px;
   }
-  // button {
-  //   background: url("./../media/arrow.svg");
-  //   width: 50px;
-  //   height: 50px;
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  //   border: none;
-  // }
-  // button:first-child {
-  //   transform: rotate(180deg);
-  // }
+  button span {
+    background: url("./../media/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+  }
+  .left {
+    @include position(absolute, 100px, initial, initial, 50px);
+    span {
+      transform: rotate(180deg);
+      @include position(absolute, 0, initial, initial, 0);
+    }
+  }
+  .right {
+    @include position(absolute, 100px, 50px, initial, initial);
+    span {
+      @include position(absolute, 0, 0, initial, initial);
+    }
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+  }
+  button:first-child {
+    // transform: rotate(180deg);
+  }
 }
