@@ -3,6 +3,7 @@
   height: 250px;
   border: solid black 2px;
   text-align: center;
+  color: $pink;
   @include flex(space-around, column, center);
   flex: 0 0 auto;
   //
@@ -24,22 +25,23 @@
     @include position(absolute, 100px, initial, initial, 50px);
     span {
       transform: rotate(180deg);
-      @include position(absolute, 0, initial, initial, 0);
+      @include position(absolute, 0, initial, initial, -35px);
     }
   }
   .right {
     @include position(absolute, 100px, 50px, initial, initial);
     span {
-      @include position(absolute, 0, 0, initial, initial);
+      @include position(absolute, 0, -35px, initial, initial);
     }
   }
   button {
-    width: 50px;
+    color: $pink;
+    // width: 50px;
     height: 50px;
     border: none;
     background: none;
-  }
-  button:first-child {
-    // transform: rotate(180deg);
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 3px 3px black;
   }
 }
