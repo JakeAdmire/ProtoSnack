@@ -9,11 +9,13 @@ export default class Main extends Component {
   showNextCard = () => {
     if ((this.state.cardNumber + 1) < this.props.cards.length) {
       this.setState({cardNumber: this.state.cardNumber += 1});
+      this.props.resetState({cardNumber: this.state.cardNumber++});
     }
   }
   showPrevCard = () => {
     if (this.state.cardNumber !== 0) {
       this.setState({cardNumber: this.state.cardNumber -= 1});
+      this.props.resetState({cardNumber: this.state.cardNumber--});
     }
   }
   generateCards = () => {
@@ -32,6 +34,7 @@ export default class Main extends Component {
    return(cardsList[this.state.cardNumber]); 
   }
   render() {
+    // console.log(this.props.cards[this.state.cardNumber]);
     return (
       <div className="main">
         {this.generateCards()}
