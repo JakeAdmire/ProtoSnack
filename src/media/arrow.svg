@@ -1,5 +1,5 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="306px" height="306px" viewBox="0 0 306 306" xml:space="preserve" style="fill: hsl(335, 40%, 88%)">
+	 width="306px" height="306px" viewBox="0 0 306 306" xml:space="preserve" style="fill: hsl(336, 60%, 78%)">
    <filter id="dropshadow" height="130%">
   <feGaussianBlur in="SourceAlpha" stdDeviation="0"/>
   <feOffset dx="10" dy="10" result="offsetblur"/>
