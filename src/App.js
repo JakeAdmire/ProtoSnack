@@ -22,14 +22,18 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Welcome />
-        <Header  userName={this.state.userName}
-                  completion={this.state.completion}
-                  />
-        <Main cards={flashCards}
-              resetState={this.resetState}/>
-        <Answers  answers={prototypes}
-                  correctAnswer={flashCards[this.state.cardNumber].solutionPrototype}/>
+        <div className="donut">
+        </div>
+        <div>
+          <Welcome />
+          <Header  userName={this.state.userName}
+                    completion={this.state.completion}
+                    />
+          <Main cards={flashCards}
+                resetState={this.resetState}/>
+          <Answers  answers={prototypes}
+                    correctAnswer={flashCards[this.state.cardNumber].solutionPrototype}/> 
+        </div>
       </div>
     );
   }
