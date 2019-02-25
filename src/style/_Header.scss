@@ -1,23 +1,26 @@
 .header {
   height: 100px;
   color: $pink;
-  text-shadow: 2px 2px black;
-  // border: solid black 2px;
-  // background: white;
   @include position(fixed, 0, 0, initial, 0);
   @include flex(center, row, center);
   h1 {
     font-family: 'Pacifico';
     font-size: 46px;
+    text-shadow: 3px 3px black;
   }
   p {
     font-size: 20px;
+    text-shadow: 2px 2px black;
   }
   p:nth-child(2) {
     @include position(absolute, 0, 20px, initial, initial);
   }
   p:last-child {
     @include position(absolute, initial, 20px, 0, initial);
+  }
+  span {
+    color: #fff;
+    font-weight: 700;
   }
 }
 
