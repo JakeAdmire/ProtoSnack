@@ -22,7 +22,6 @@ export default class App extends Component {
         <Header  userName={this.state.userName}
                   completion={this.state.completion}
                   />
-        <Nav />
         <Main cards={flashCards}/>
         <Answers answers={prototypes}/>
       </div>
