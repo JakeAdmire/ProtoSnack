@@ -19,24 +19,24 @@ export default class Welcome extends Component {
     localStorage.setItem('userName', this.state.userName);
     localStorage.setItem('firstTime', this.state.userName.length ? false : true);
     this.setState({firstTime: this.state.userName.length ? false : true});
+    this.props.resetState({userName: this.state.userName.length ? this.state.userName : 'User2'});
   }
   render() {
     console.log('firsttime', this.state.firstTime);
-    let welcomeHeader = this.state.firstTime ? <h1>Welcome to <span>ProtoSnack!</span></h1> : '';
-    let welcomeTitle = this.state.firstTime ? "We see that this is your first time here!" : '';
-    let welcomeDescript = this.state.firstTime ? "ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!" : '';
-    let welcomeGoodbye = this.state.firstTime ? "ProtoSnack will remember your progress for you, so feel free to relax and study!" : '';
-    let continueButton = this.state.firstTime ? <form className="inputContainer"><input onChange={this.setName} className="userSubmit" type="text" placeholder="enter name here.." ></input><button onClick={this.storeName}>Submit</button></form> : '';
+    let containerClass = this.state.firstTime ? "screen" : "hide";
     return (
-      <div className="screen hide">
+      <div className={containerClass}>
         <div className="welcome">
           <div className="title">
-            {welcomeHeader}
-            <h3>{welcomeTitle}</h3>
+            <h1>Welcome to <span>ProtoSnack!</span></h1>
+            <h3>We see that this is your first time here!</h3>
           </div>
-          <p>{welcomeDescript}</p>
-          <p>{welcomeGoodbye}</p>
-          {continueButton}
+          <p>ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!</p>
+          <p>ProtoSnack will remember your progress for you, so feel free to relax and study!</p>
+          <form className="inputContainer">
+            <input onChange={this.setName} className="userSubmit" type="text" placeholder="enter name here.." ></input>
+            <button onClick={this.storeName}>Submit</button>
+          </form>
         </div>
       </div>
       )
