@@ -1,29 +1,65 @@
-.hide {
-  display: none;
-}
+// .hide {
+//   display: none;
+// }
 
 .screen {
   @include position(absolute, 0, 0, 0, 0);
+  background: hsla(0, 0%, 0%, 0.75);
+  z-index: 1;
 }
 
 .welcome {
-  padding: 10px;
-  border: solid black 2px;
-  background: white;
+  padding: 25px;
   margin: auto;
-  width: 600px;
-  text-align: center;
+  border-radius: 20px;
+  background: $babyBlue;
+  @include boxGen(400px, 900px);
   @include position(relative, 100px, initial, initial, initial);
   @include flex(space-between, column, center);
   h1 {
-    font-size: 3vw;
     margin: 0;
+    @include customText(40px, inherit, 'Open Sans', #fff, center, 2px);
+    span { font-family: 'Pacifico'; font-size: 44px; }
   }
   h3 {
-    font-size: 2vw;
     margin: 0;
+    font-style: italic;
+    @include customText(20px, 600, 'Open Sans', #fff, center, 2px);
   }
   p {
     margin: 0;
+    @include customText(20px, 800, 'Open Sans', #fff, center, 2px);
+  }
+  .inputContainer {
+    display: flex;
+    @include boxGen(50px, 500px);
+    input {
+      border: none;
+      border-radius: 10px 0 0 10px;
+      padding: 10px;
+      font-size: 20px;
+      @include boxGen(100%, 80%);
+      &::placeholder {
+        font-size: 20px;
+        transition: all .2s ease;
+      }
+      &:focus {
+        &::placeholder { color: #fff; }
+      }
+    }
+    button {
+      border: none;
+      border-radius: 0 10px 10px 0;
+      background: darken($babyBlue, 30%);
+      color: $babyBlue;
+      font-size: 20px;
+      transition: all .2s ease;
+      @include boxGen(100%, 20%);
+      &:hover {
+        cursor: pointer;
+        background: darken($babyBlue, 40%);
+      }
+      &:active { opacity: 0.5; }
+    }
   }
 }
