@@ -9,7 +9,7 @@
 }
 
 .welcome {
-  padding: 10px;
+  padding: 25px;
   margin: auto;
   border-radius: 20px;
   background: $babyBlue;
@@ -17,14 +17,13 @@
   @include position(relative, 100px, initial, initial, initial);
   @include flex(space-between, column, center);
   h1 {
-    // font-size: 3vw;
     margin: 0;
-    @include customText(40px, 800, 'Open Sans', #fff, center, 1px);
+    @include customText(40px, inherit, 'Open Sans', #fff, center, 2px);
+    span { font-family: 'Pacifico'; font-size: 44px; }
   }
   h3 {
-    // font-size: 2vw;
     margin: 0;
-    @include customText(20px, 800, 'Open Sans', #fff, center, 1px);
+    @include customText(20px, 800, 'Open Sans', #fff, center, 2px);
   }
   p {
     margin: 0;
