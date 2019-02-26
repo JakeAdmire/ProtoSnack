@@ -4,27 +4,30 @@
 
 .screen {
   @include position(absolute, 0, 0, 0, 0);
+  background: hsla(0, 0%, 0%, 0.75);
+  z-index: 1;
 }
 
 .welcome {
-  z-index: 1;
   padding: 10px;
-  border: solid black 2px;
-  background: white;
   margin: auto;
-  width: 600px;
-  text-align: center;
+  border-radius: 20px;
+  background: $babyBlue;
+  @include boxGen(400px, 900px);
   @include position(relative, 100px, initial, initial, initial);
   @include flex(space-between, column, center);
   h1 {
-    font-size: 3vw;
+    // font-size: 3vw;
     margin: 0;
+    @include customText(40px, 800, 'Open Sans', #fff, center, 1px);
   }
   h3 {
-    font-size: 2vw;
+    // font-size: 2vw;
     margin: 0;
+    @include customText(20px, 800, 'Open Sans', #fff, center, 1px);
   }
   p {
     margin: 0;
+    @include customText(20px, 800, 'Open Sans', #fff, center, 1px);
   }
 }
