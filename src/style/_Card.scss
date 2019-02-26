@@ -44,8 +44,9 @@
   .left {
     @include position(absolute, -50px, initial, initial, -10px);
     span {
-      transform: rotate(180deg);
       @include position(absolute, 0, initial, initial, -35px);
+      transform: scaleX(-1);
+      filter: FlipH;
     }
   }
   .right {
