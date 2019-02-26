@@ -17,7 +17,10 @@
     @include boxGen(100%, 100%);
     @include flex(space-between, column, center);
     padding: 15px;
-    h3:first-child { font-size: 30px; }
+    h3:first-child { 
+      font-size: 30px;
+      margin: 0; 
+    }
     .snippet {
       margin: 0;
       padding: 10px;
@@ -38,6 +41,11 @@
       background-repeat: no-repeat;
       @include boxGen(50px, 50px);
     }
+    &:hover {
+      color: darken($pink, 10%);
+      cursor: pointer;
+    }
+    &:active { opacity: 0.5; }
   }
   .left {
     @include position(absolute, -50px, initial, initial, -10px);
