@@ -17,6 +17,7 @@ export default class App extends Component {
       }
   }
   componentDidMount() {
+    this.setState({userName: localStorage.getItem('userName') ? localStorage.getItem('userName') : 'User'});
     console.log('mounted');
     fetch('http://memoize-datasets.herokuapp.com/api/v1/jaflashcards')
       .then(response => response.json())
@@ -40,16 +41,18 @@ export default class App extends Component {
       })
   }
   resetState = (state) => {
+    console.log('resetState', state);
     this.setState(state);
   }
   render() {
+    console.log(this.state.userName);
     if (this.state.cards.length > 0 && this.state.prototypes.length > 0) {
       return (
         <div className="App">
           <div className="donut">
           </div>
           <div>
-            <Welcome />
+            <Welcome  resetState={this.resetState}/>
             <Header  userName={this.state.userName}
                       completion={this.state.completion}
                       />
