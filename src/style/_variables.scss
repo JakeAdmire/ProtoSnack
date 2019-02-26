@@ -13,9 +13,18 @@
   left: $left;
 }
 
-@mixin equalSides($size) {
-  height: $size;
-  width: $size;
+@mixin boxGen($size1, $size2) {
+  height: $size1;
+  width: $size2;
+}
+
+@mixin customText($size, $weight, $family, $color, $align, $shadowSize) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+  color: $color;
+  text-align: $align;
+  text-shadow: $shadowSize $shadowSize black;
 }
 
 $pink: hsl(336, 60%, 78%);
