@@ -4,9 +4,7 @@
   @include position(fixed, 0, 0, initial, 0);
   @include flex(center, row, center);
   h1 {
-    font-family: 'Pacifico';
-    font-size: 46px;
-    text-shadow: 3px 3px black;
+    @include customText(46px, 400, 'Pacifico', $pink, center, 3px);
   }
   p {
     font-size: 20px;
