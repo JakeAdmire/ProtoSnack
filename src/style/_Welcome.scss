@@ -29,4 +29,30 @@
     margin: 0;
     @include customText(20px, 800, 'Open Sans', #fff, center, 1px);
   }
+  .inputContainer {
+    display: flex;
+    @include boxGen(50px, 500px);
+    input {
+      border: none;
+      border-radius: 10px 0 0 10px;
+      padding: 10px;
+      font-size: 20px;
+      @include boxGen(100%, 80%);
+      &::placeholder {
+        font-size: 20px;
+        transition: all .2s ease;
+      }
+      &:focus {
+        &::placeholder { color: #fff; }
+      }
+    }
+    button {
+      border: none;
+      border-radius: 0 10px 10px 0;
+      background: darken($babyBlue, 30%);
+      color: $babyBlue;
+      font-size: 20px;
+      @include boxGen(100%, 20%);
+    }
+  }
 }
