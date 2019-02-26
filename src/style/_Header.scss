@@ -4,13 +4,10 @@
   @include position(fixed, 0, 0, initial, 0);
   @include flex(center, row, center);
   h1 {
-    font-family: 'Pacifico';
-    font-size: 46px;
-    text-shadow: 3px 3px black;
+    @include customText(46px, 400, 'Pacifico', $pink, center, 3px);
   }
   p {
-    font-size: 20px;
-    text-shadow: 2px 2px black;
+    @include customText(20px, initial, 'Open Sans', $pink, center, 2px);
   }
   p:nth-child(2) {
     @include position(absolute, 0, 20px, initial, initial);
@@ -19,8 +16,7 @@
     @include position(absolute, initial, 20px, 0, initial);
   }
   span {
-    color: #fff;
-    font-weight: 700;
+    @include customText(20px, 700, inherit, #fff, initial, 2px);
   }
 }
 
