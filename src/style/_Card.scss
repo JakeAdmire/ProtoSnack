@@ -1,50 +1,57 @@
 .card {
-  width: 800px;
-  height: 250px;
   border-radius: 20px;
-  text-align: center;
-  color: $pink;
-  background: hsl(180, 32%, 67%);
-  @include position(relative, 0, 0, 0, 0);
-  display: flex;
-  justify-content: space-between;
+  background: $babyBlue;
   box-shadow: 4px 4px black;
-  text-shadow: 1px 1px black;
-  color: #fff;
+  @include boxGen(250px, 800px);
+  @include position(relative, 0, 0, 0, 0);
+  @include customText(initial, initial, 'Open Sans', #fff, center, 1px);
   .card-counter {
-    width: 33px;
-    padding-top: 8px;
-    font-size: 20px;
+    background: darken($babyBlue, 30%);
+    border-radius: 50%;
+    padding: 10px;
+    @include boxGen(50px, 50px);
+    @include position(absolute, 10px, initial, initial, 10px);
+    @include customText(20px, 800, 'Open Sans', $babyBlue, center, 1px);
   }
   .card-front {
-    width: 100%;
-  }
-  h1 {
-    font-size: 15px;
-  }
-  h2 {
-    font-size: 12px;
+    @include boxGen(100%, 100%);
+    @include flex(space-between, column, center);
+    padding: 15px;
+    h3:first-child { 
+      font-size: 30px;
+      margin: 0; 
+    }
+    .snippet {
+      margin: 0;
+      padding: 10px;
+      background: darken($babyBlue, 30%);
+      border-radius: 10px;
+      width: 100%;
+      color: $babyBlue;
+    }
   }
   button {
-    color: $pink;
     height: 50px;
     border: none;
     background: none;
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: 3px 3px black;
+    @include customText(30px, 700, 'Open Sans', $pink, center, 3px);
     span {
       background: url("./../media/arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
-      width: 50px;
-      height: 50px;
+      @include boxGen(50px, 50px);
     }
+    &:hover {
+      color: darken($pink, 10%);
+      cursor: pointer;
+    }
+    &:active { opacity: 0.5; }
   }
   .left {
     @include position(absolute, -50px, initial, initial, -10px);
     span {
-      transform: rotate(180deg);
+      transform: scaleX(-1);
+      filter: FlipH;
       @include position(absolute, 0, initial, initial, -35px);
     }
   }
