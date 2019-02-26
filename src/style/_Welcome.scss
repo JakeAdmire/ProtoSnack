@@ -23,11 +23,12 @@
   }
   h3 {
     margin: 0;
-    @include customText(20px, 800, 'Open Sans', #fff, center, 2px);
+    font-style: italic;
+    @include customText(20px, 600, 'Open Sans', #fff, center, 2px);
   }
   p {
     margin: 0;
-    @include customText(20px, 800, 'Open Sans', #fff, center, 1px);
+    @include customText(20px, 800, 'Open Sans', #fff, center, 2px);
   }
   .inputContainer {
     display: flex;
@@ -52,7 +53,13 @@
       background: darken($babyBlue, 30%);
       color: $babyBlue;
       font-size: 20px;
+      transition: all .2s ease;
       @include boxGen(100%, 20%);
+      &:hover {
+        cursor: pointer;
+        background: darken($babyBlue, 40%);
+      }
+      &:active { opacity: 0.5; }
     }
   }
 }
