@@ -28,6 +28,7 @@ export default class Main extends Component {
           cardNumber={this.state.cardNumber}
           nextCard={this.showNextCard}
           prevCard={this.showPrevCard}
+          answers={this.props.answers}
           correctAnswer={this.props.correctAnswer}
         />
       );
@@ -35,7 +36,6 @@ export default class Main extends Component {
    return(cardsList[this.state.cardNumber]); 
   }
   render() {
-    console.log('Main props:', this.props);
     return (
       <div className="main">
         {this.generateCards()}

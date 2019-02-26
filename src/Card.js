@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
+import Answers from './Answers.js';
 
 export default class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = { showAnswer: false, correctAnswer: '' };
+    this.state = { showAnswer: false };
   }
-  checkAnswer = (event) => {
-    if (event === this.props.frontContent.solutionPrototype) {
-      console.log('correct answer!');
+  flipCard = (event) => {
+    console.log(event.target.innerText);
+    if (event.target.innerText === this.props.frontContent.solutionPrototype) {
+      console.log('correct!');
       this.setState({showAnswer: true});
-    }
-  }
-  resetState = () => {
-    this.setState({showAnswer: false});
+    } else { console.log('false!'); }
   }
   render() {
-    if (this.state.showAnswer === false) { this.checkAnswer(this.props.correctAnswer) }
-    // this.checkAnswer(this.props.correctAnswer);
     let content = this.state.showAnswer ? this.props.backContent : this.props.frontContent;
     let cardClass = this.state.showAnswer ? 'back' : '';
     let cardElements = this.state.showAnswer 
@@ -38,6 +35,9 @@ export default class Card extends Component {
         </button>
         <span onClick={() => this.setState({showAnswer: !this.state.showAnswer})} className='card-counter'>{this.props.cardNumber + 1}</span>
         {cardElements}
+        <Answers  answers={this.props.answers}
+                  correctAnswer={this.props.correctAnswer}
+                  flipCard={this.flipCard}/>
       </div>
     )
   }

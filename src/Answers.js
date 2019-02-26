@@ -1,5 +1,5 @@
 import React from 'react';
-import Solution from './Solution.js'
+import Solution from './Solution.js';
 
 
 export default function Answers(props) {
@@ -8,16 +8,15 @@ export default function Answers(props) {
     let randomIndex = Math.floor(Math.random() * props.answers.length);
     answersArray.push(props.answers[randomIndex]);
   };
-  // console.log('answer:', props);
   return (
     <div className="answers">
       {answersArray.map((answer) => {
         return <Solution  answer={answer.name}
-                          resetState={props.resetState} />
+                          flipCard={props.flipCard} />
         })
       }
       <Solution answer={props.correctAnswer}
-                resetState={props.resetState} />
+                flipCard={props.flipCard} />
     </div>
   )
 }
