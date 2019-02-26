@@ -11,9 +11,13 @@
   @include position(relative, 0, 0, 0, 0);
   .card-counter {
     position: absolute;
-    left: 0;
-    width: 33px;
+    left: 10px;
+    top: 10px;
+    @include equalSides(50px);
     font-size: 20px;
+    background: darken($babyBlue, 20%);
+    border-radius: 50%;
+    padding: 10px;
   }
   .card-front {
     width: 100%;

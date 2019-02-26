@@ -13,5 +13,10 @@
   left: $left;
 }
 
+@mixin equalSides($size) {
+  height: $size;
+  width: $size;
+}
+
 $pink: hsl(336, 60%, 78%);
 $babyBlue: hsl(180, 32%, 67%);
