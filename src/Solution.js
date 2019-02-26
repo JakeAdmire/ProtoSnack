@@ -6,10 +6,14 @@ export default class Solution extends Component {
     super(props);
     this.state = {};
   }
+  passAnswer = (event) => {
+    this.props.resetState({correctAnswer: event.target.innerText});
+  }
   render() {
+    // console.log('Solution props:', this.props);
     return (
       <div className="solution">
-        <button>{this.props.answer}</button>
+        <button onClick={this.passAnswer}>{this.props.answer}</button>
       </div>
       )
   }

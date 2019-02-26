@@ -3,12 +3,20 @@ import React, { Component } from 'react';
 export default class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = { showAnswer: false }
+    this.state = { showAnswer: false, correctAnswer: '' };
+  }
+  checkAnswer = (event) => {
+    if (event === this.props.frontContent.solutionPrototype) {
+      console.log('correct answer!');
+      this.setState({showAnswer: true});
+    }
   }
   resetState = () => {
     this.setState({showAnswer: false});
   }
   render() {
+    if (this.state.showAnswer === false) { this.checkAnswer(this.props.correctAnswer) }
+    // this.checkAnswer(this.props.correctAnswer);
     let content = this.state.showAnswer ? this.props.backContent : this.props.frontContent;
     let cardClass = this.state.showAnswer ? 'back' : '';
     let cardElements = this.state.showAnswer 

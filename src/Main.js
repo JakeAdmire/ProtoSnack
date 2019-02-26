@@ -5,7 +5,7 @@ export default class Main extends Component {
   constructor(props) {
     super(props);
     this.state = { cardNumber: 0 };
-  }
+  } 
   showNextCard = () => {
     if ((this.state.cardNumber + 1) < this.props.cards.length) {
       this.setState({cardNumber: this.state.cardNumber += 1});
@@ -28,13 +28,14 @@ export default class Main extends Component {
           cardNumber={this.state.cardNumber}
           nextCard={this.showNextCard}
           prevCard={this.showPrevCard}
+          correctAnswer={this.props.correctAnswer}
         />
       );
     })
    return(cardsList[this.state.cardNumber]); 
   }
   render() {
-    // console.log(this.props.cards[this.state.cardNumber]);
+    console.log('Main props:', this.props);
     return (
       <div className="main">
         {this.generateCards()}

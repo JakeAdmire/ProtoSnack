@@ -13,12 +13,13 @@ export default class App extends Component {
       completion: 0,
       cardNumber: 0,
       cards: [],
-      prototypes: []
+      prototypes: [],
+      correctAnswer: ''
       }
   }
   componentDidMount() {
     this.setState({userName: localStorage.getItem('userName') ? localStorage.getItem('userName') : 'User'});
-    console.log('mounted');
+    // console.log('mounted');
     fetch('http://memoize-datasets.herokuapp.com/api/v1/jaflashcards')
       .then(response => response.json())
       .then(cards => {
@@ -41,11 +42,11 @@ export default class App extends Component {
       })
   }
   resetState = (state) => {
-    console.log('resetState', state);
+    // console.log('resetState', state);
     this.setState(state);
   }
   render() {
-    console.log(this.state.userName);
+    console.log('app:', this.state.correctAnswer);
     if (this.state.cards.length > 0 && this.state.prototypes.length > 0) {
       return (
         <div className="App">
@@ -57,9 +58,11 @@ export default class App extends Component {
                       completion={this.state.completion}
                       />
             <Main cards={this.state.cards}
-                  resetState={this.resetState}/>
+                  resetState={this.resetState}
+                  correctAnswer={this.state.correctAnswer}/>
             <Answers  answers={this.state.prototypes}
-                      correctAnswer={this.state.cards[this.state.cardNumber].solutionPrototype}/> 
+                      correctAnswer={this.state.cards[this.state.cardNumber].solutionPrototype}
+                      resetState={this.resetState}/> 
           </div>
         </div>
       );

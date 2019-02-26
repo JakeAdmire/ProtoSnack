@@ -8,14 +8,16 @@ export default function Answers(props) {
     let randomIndex = Math.floor(Math.random() * props.answers.length);
     answersArray.push(props.answers[randomIndex]);
   };
-  console.log('answer', props.correctAnswer);
+  // console.log('answer:', props);
   return (
     <div className="answers">
       {answersArray.map((answer) => {
-        return <Solution  answer={answer.name} />
+        return <Solution  answer={answer.name}
+                          resetState={props.resetState} />
         })
       }
-      <Solution answer={props.correctAnswer} />
+      <Solution answer={props.correctAnswer}
+                resetState={props.resetState} />
     </div>
   )
 }
