@@ -8,9 +8,8 @@ export default class Welcome extends Component {
   componentDidMount = () => {
     this.setState({firstTime: localStorage.getItem('firstTime') ? false : true});
   }
-  setName = () => {
-    const value = document.querySelector('.userSubmit').value;
-    this.setState({userName: value});
+  setName = (event) => {
+    this.setState({userName: event.target.value});
   }
   storeName = (e) => {
     e.preventDefault();
@@ -34,7 +33,7 @@ export default class Welcome extends Component {
           <p>ProtoSnack will remember your progress for you, so feel free to relax and study!</p>
           <form className="inputContainer">
             <input onChange={this.setName} className="userSubmit" type="text" placeholder="enter name here.." ></input>
-            <button onClick={this.storeName}>Submit</button>
+            <button onClick={this.storeName} className="submitName">Submit</button>
           </form>
         </div>
       </div>
