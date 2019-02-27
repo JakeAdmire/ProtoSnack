@@ -9,12 +9,18 @@ export default class Answers extends Component {
   }
   generateAnswers() {
     let wrongAnswers = [];
+    this.props.answers.forEach((answer) => { 
+      if (answer.name !== this.props.correctAnswer) {
+        wrongAnswers.push(answer.name);
+      }
+    })
+    let wrongChoices = [];
     for (let i = 0; i < 3; i++) {
-      let randomIndex = Math.floor(Math.random() * this.props.answers.length);
-      wrongAnswers.push(this.props.answers[randomIndex].name);
+      let randomIndex = Math.floor(Math.random() * wrongAnswers.length);
+      wrongChoices.push(wrongAnswers[randomIndex]);
     }
-    wrongAnswers.push(this.props.correctAnswer);
-    this.shuffleArray(wrongAnswers)
+    wrongChoices.push(this.props.correctAnswer);
+    this.shuffleArray(wrongChoices);
   }
   shuffleArray(array) {
     this.answersArray = array.sort();
