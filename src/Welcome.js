@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-
 export default class Welcome extends Component {
   constructor() {
     super();
     this.state = { firstTime: true, userName: '' };
   }
   componentDidMount = () => {
-    // console.log('mounteeeeng');
     this.setState({firstTime: localStorage.getItem('firstTime') ? false : true});
   }
   setName = () => {
@@ -18,11 +16,12 @@ export default class Welcome extends Component {
     e.preventDefault();
     localStorage.setItem('userName', this.state.userName);
     localStorage.setItem('firstTime', this.state.userName.length ? false : true);
+    localStorage.setItem('cardsArray', JSON.stringify(this.props.cards));
+    localStorage.setItem('currNum', 0);
     this.setState({firstTime: this.state.userName.length ? false : true});
     this.props.resetState({userName: this.state.userName.length ? this.state.userName : 'User2'});
   }
   render() {
-    // console.log('firsttime', this.state.firstTime);
     let containerClass = this.state.firstTime ? "screen" : "hide";
     return (
       <div className={containerClass}>

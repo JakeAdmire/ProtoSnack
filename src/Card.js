@@ -4,7 +4,7 @@ import Answers from './Answers.js';
 export default class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = { showAnswer: false, attemptCorrect: false };
+    this.state = { showAnswer: false, attemptCorrect: false, cardNumber: 0 };
   }
   showResults = (event) => {
     if (event.target.innerText === this.props.frontContent.solutionPrototype) {
@@ -24,9 +24,21 @@ export default class Card extends Component {
   handleClick = (event) => {
     if (event.target.innerText === 'try again') { this.setState({showAnswer: false}); 
     } else { 
-      this.props.nextCard();
-      this.setState({showAnswer: false, attemptCorrect: false})
+      let newNum = JSON.parse( localStorage.getItem('currNum') );
+      this.setCardNum(newNum);
+      this.setStorage();
+      this.setState({showAnswer: false, attemptCorrect: false, cardNumber: newNum++})
     }
+  }
+  setCardNum = (newNum) => {
+    newNum++;
+    localStorage.setItem('currNum', newNum);
+    this.props.resetState({cardNumber: newNum++});
+  }
+  setStorage() {
+    let cardsArray = JSON.parse( localStorage.getItem('cardsArray') );
+    cardsArray.splice(0, 1);
+    localStorage.setItem( 'cardsArray', JSON.stringify(cardsArray) );
   }
   generateCard() {
     let header = this.state.attemptCorrect ? 'Good Job!' : 'Incorrect!';
@@ -58,10 +70,10 @@ export default class Card extends Component {
         <button onClick={this.changeCards} className="right">SKIP
           <span></span>
         </button>
-        <span onClick={() => this.setState({showAnswer: !this.state.showAnswer})} className='card-counter'>{this.props.cardNumber + 1}</span>
+        <span onClick={() => this.setState({showAnswer: !this.state.showAnswer})} className='card-counter'>{JSON.parse( localStorage.getItem('currNum') ) + 1}</span>
         {this.generateCard()}
         <Answers  answers={this.props.answers}
-                  correctAnswer={this.props.correctAnswer}
+                  correctAnswer={this.props.frontContent.solutionPrototype}
                   showResults={this.showResults}/>
       </div>
     )
