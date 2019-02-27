@@ -43,7 +43,7 @@ export default class App extends Component {
 
     let appendMain = ''
     
-    if (cards) {
+    if (this.state.cards.length && cards) {
       cards.length
         ? appendMain = <Main  cards={cards}
                               answers={this.state.prototypes}
