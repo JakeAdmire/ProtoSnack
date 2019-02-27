@@ -30,13 +30,22 @@
       color: $babyBlue;
     }
   }
-  .left,
-  .right {
+  button {
     height: 50px;
     border: none;
     background: none;
-    opacity: 0.3;
+    cursor: pointer;
+    transition: all .2s ease;
     @include customText(30px, 700, 'Open Sans', $pink, center, 3px);
+  }
+  .back-button {
+    color: white;
+    &:hover { color: darken(white, 10%); }
+    &:active { opacity: 0.5; }
+  }
+  .left,
+  .right {
+    opacity: 0.3;
     span {
       background: url("./../media/arrow.svg");
       background-size: contain;
