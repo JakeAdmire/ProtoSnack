@@ -29,8 +29,9 @@ export default class Answers extends Component {
     this.generateAnswers();
     return (
       <div className="answers">
-        {this.answersArray.map((answer) => {
-          return <Solution  answer={answer}
+        {this.answersArray.map((answer, index) => {
+          return <Solution  key={index}  
+                            answer={answer}
                             showResults={this.props.showResults} />
           })
         }

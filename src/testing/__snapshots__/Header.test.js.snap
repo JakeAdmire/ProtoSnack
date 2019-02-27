@@ -20,7 +20,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h1>
-          ProtoCards
+          ProtoSnack!
         </h1>,
         <p>
           Welcome 
@@ -45,10 +45,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "ProtoCards",
+          "children": "ProtoSnack!",
         },
         "ref": null,
-        "rendered": "ProtoCards",
+        "rendered": "ProtoSnack!",
         "type": "h1",
       },
       Object {
@@ -101,7 +101,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": null,
             },
             "ref": null,
             "rendered": null,
@@ -134,7 +134,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
-            ProtoCards
+            ProtoSnack!
           </h1>,
           <p>
             Welcome 
@@ -159,10 +159,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "ProtoCards",
+            "children": "ProtoSnack!",
           },
           "ref": null,
-          "rendered": "ProtoCards",
+          "rendered": "ProtoSnack!",
           "type": "h1",
         },
         Object {
@@ -215,7 +215,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": null,
               },
               "ref": null,
               "rendered": null,

@@ -18,14 +18,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "loading",
+      "children": <div>
+        loading
+      </div>,
     },
     "ref": null,
-    "rendered": "loading",
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -34,6 +32,32 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": "loading",
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div>
+          loading
+        </div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "loading",
+        },
+        "ref": null,
+        "rendered": "loading",
+        "type": "div",
+      },
       "type": "div",
     },
   ],

@@ -11,6 +11,7 @@ ShallowWrapper {
     }
     nextCard={[MockFunction]}
     prevCard={[MockFunction]}
+    resetState={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -29,14 +30,14 @@ ShallowWrapper {
       "children": Array [
         <button
           className="left"
-          onClick={[Function]}
+          disabled={true}
         >
           PREVIOUS
           <span />
         </button>,
         <button
           className="right"
-          onClick={[Function]}
+          disabled={true}
         >
           SKIP
           <span />
@@ -77,7 +78,7 @@ ShallowWrapper {
             <span />,
           ],
           "className": "left",
-          "onClick": [Function],
+          "disabled": true,
         },
         "ref": null,
         "rendered": Array [
@@ -104,7 +105,7 @@ ShallowWrapper {
             <span />,
           ],
           "className": "right",
-          "onClick": [Function],
+          "disabled": true,
         },
         "ref": null,
         "rendered": Array [
@@ -215,14 +216,14 @@ ShallowWrapper {
         "children": Array [
           <button
             className="left"
-            onClick={[Function]}
+            disabled={true}
           >
             PREVIOUS
             <span />
           </button>,
           <button
             className="right"
-            onClick={[Function]}
+            disabled={true}
           >
             SKIP
             <span />
@@ -263,7 +264,7 @@ ShallowWrapper {
               <span />,
             ],
             "className": "left",
-            "onClick": [Function],
+            "disabled": true,
           },
           "ref": null,
           "rendered": Array [
@@ -290,7 +291,7 @@ ShallowWrapper {
               <span />,
             ],
             "className": "right",
-            "onClick": [Function],
+            "disabled": true,
           },
           "ref": null,
           "rendered": Array [

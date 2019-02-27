@@ -6,6 +6,7 @@ import { shallow } from 'enzyme';
 const mockCard = {problem: ''};
 const showPrevCardMock = jest.fn();
 const showNextCardMock = jest.fn();
+const resetStateMock = jest.fn();
 
 describe('Card', () => {
   let wrapper;
@@ -15,6 +16,7 @@ describe('Card', () => {
           frontContent={mockCard}
           nextCard={showNextCardMock}
           prevCard={showPrevCardMock}
+          resetState={resetStateMock}
         />
     );
   });
@@ -36,18 +38,9 @@ describe('Card', () => {
     expect(wrapper.state('showAnswer')).toEqual(false);
   })
 
-  it('should invoke changeCards on left button click', () => {
-    wrapper.instance().setState({'showAnswer': true});
-    expect(wrapper.state('showAnswer')).toEqual(true);
-    wrapper.find('.left').simulate('click', {target: {classList: {value: 'left'}}});
-    expect(wrapper.state('showAnswer')).toEqual(false);
-  })
-
-  it('should invoke changeCards on right button click', () => {
-    wrapper.instance().setState({'showAnswer': true});
-    expect(wrapper.state('showAnswer')).toEqual(true);
-    wrapper.find('.right').simulate('click', {target: {classList: {value: 'right'}}});
-    expect(wrapper.state('showAnswer')).toEqual(false);
+  it('should call resetState when setCardNum is invoked', () => {
+    wrapper.instance().setCardNum(1);
+    expect(resetStateMock).toBeCalled();
   })
 
   it('should change state when showResults is invoked', () => {
