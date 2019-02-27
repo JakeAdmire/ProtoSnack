@@ -13,7 +13,7 @@ export default class Card extends Component {
       this.setState({attemptCorrect: false, showAnswer: true})
     }
   }
-  handleClick = (event) => {
+  changeCards = (event) => {
     if (event.target.classList.value === 'left') { 
       this.props.prevCard() 
     } else { 
@@ -21,23 +21,46 @@ export default class Card extends Component {
     }
     this.setState({showAnswer: false})
   }
+  handleClick = (event) => {
+    console.log(event.target.innerText);
+    if (event.target.innerText == 'try again') { this.setState({showAnswer: false}); 
+    } else { 
+      this.props.nextCard();
+      this.setState({showAnswer: false, attemptCorrect: false})
+    }
+  }
+  generateCard() {
+    let header = this.state.attemptCorrect ? 'Good Job!' : 'Incorrect!';
+    let button = this.state.attemptCorrect ? 'next prototype' : 'try again';
+    if (this.state.showAnswer) {
+      return (
+      <div className="card-back">
+        <h2>{header}</h2>
+        <button onClick={this.handleClick}>{button}</button> 
+      </div>
+      ) 
+    } else {
+      return (
+      <div className="card-front">
+        <h3>What prototype would you use to..</h3>
+        <h3>{this.props.frontContent.problem}</h3> 
+        <h4 className="snippet">{this.props.frontContent.snippet}</h4>
+      </div>
+      )
+    }
+  }
   render() {
-    console.log(this.state.attemptCorrect);
-    let content = this.state.showAnswer ? this.props.backContent : this.props.frontContent;
     let cardClass = this.state.showAnswer ? 'back' : '';
-    let cardElements = this.state.showAnswer 
-      ? <div className="card-back"><h3>The Correct Solution is:</h3> <h4>{content}</h4></div>
-      : <div className="card-front"><h3>What prototype would you use to..</h3><h3>{content.problem}</h3> <h4 className="snippet">{content.snippet}</h4></div>;
     return (
       <div className={`card ${cardClass}`}>
-        <button onClick={this.handleClick} className="left">PREVIOUS
+        <button onClick={this.changeCards} className="left">PREVIOUS
           <span></span>
         </button>
-        <button onClick={this.handleClick} className="right">SKIP
+        <button onClick={this.changeCards} className="right">SKIP
           <span></span>
         </button>
         <span onClick={() => this.setState({showAnswer: !this.state.showAnswer})} className='card-counter'>{this.props.cardNumber + 1}</span>
-        {cardElements}
+        {this.generateCard()}
         <Answers  answers={this.props.answers}
                   correctAnswer={this.props.correctAnswer}
                   showResults={this.showResults}/>

@@ -5,9 +5,9 @@ import Solution from './Solution.js';
 export default class Answers extends Component {
   constructor(props) {
     super(props);
-    this.state = { answersArray: []};
+    this.answersArray = [];
   }
-  componentDidMount() {
+  generateAnswers() {
     let wrongAnswers = [];
     for (let i = 0; i < 3; i++) {
       let randomIndex = Math.floor(Math.random() * this.props.answers.length);
@@ -17,12 +17,13 @@ export default class Answers extends Component {
     this.shuffleArray(wrongAnswers)
   }
   shuffleArray(array) {
-    this.setState({ answersArray: array.sort() })
+    this.answersArray = array.sort();
   }
   render() {
+    this.generateAnswers();
     return (
       <div className="answers">
-        {this.state.answersArray.map((answer) => {
+        {this.answersArray.map((answer) => {
           return <Solution  answer={answer}
                             showResults={this.props.showResults} />
           })
