@@ -86,9 +86,9 @@ export default class App extends Component {
     fetch('http://memoize-datasets.herokuapp.com/api/v1/jaflashcards')
       .then(response => response.json())
       .then(cards => {
-        this.setState({
-          cards: cards.JAFlashCards
-        })
+        // cards.JAFlashCards.forEach((card, i) => { localStorage.setItem(i, JSON.stringify(card)); })
+        localStorage.setItem('cardsArray', JSON.stringify(cards.JAFlashCards));
+        this.setState({ cards: cards.JAFlashCards })
       })
       .catch(error => {
         throw new Error(error)
@@ -108,6 +108,7 @@ export default class App extends Component {
     this.setState(state);
   }
   render() {
+    let cards = JSON.parse(localStorage.getItem('cardsArray'));
     if (this.state.cards.length > 0 && this.state.prototypes.length > 0) {
       return (
         <div className="App">
@@ -117,7 +118,7 @@ export default class App extends Component {
             <Welcome resetState={this.resetState}/>
             <Header userName={this.state.userName}
                     />
-            <Main cards={this.state.cards}
+            <Main cards={cards}
                   answers={this.state.prototypes}
                   resetState={this.resetState}
                   correctAnswer={this.state.cards[this.state.cardNumber].solutionPrototype}
