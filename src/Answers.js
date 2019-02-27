@@ -23,9 +23,8 @@ export default class Answers extends Component {
     return (
       <div className="answers">
         {this.state.answersArray.map((answer) => {
-          console.log(answer);
           return <Solution  answer={answer}
-                            flipCard={this.props.flipCard} />
+                            showResults={this.props.showResults} />
           })
         }
       </div>

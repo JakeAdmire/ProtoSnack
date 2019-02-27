@@ -9,7 +9,7 @@ export default class Solution extends Component {
   render() {
     return (
       <div className="solution">
-        <button onClick={this.props.flipCard}>{this.props.answer}</button>
+        <button onClick={this.props.showResults}>{this.props.answer}</button>
       </div>
       )
   }
