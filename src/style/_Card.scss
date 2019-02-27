@@ -4,7 +4,7 @@
   box-shadow: 4px 4px black;
   @include boxGen(250px, 800px);
   @include position(relative, 0, 0, 0, 0);
-  @include customText(initial, initial, 'Open Sans', #fff, center, 1px);
+  @include customText(initial, initial, 'Open Sans', #fff, center, 2px);
   .card-counter {
     background: darken($babyBlue, 30%);
     border-radius: 50%;
@@ -29,6 +29,13 @@
       width: 100%;
       color: $babyBlue;
     }
+  }
+  .card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    h2 { font-size: 50px; }
   }
   button {
     height: 50px;
