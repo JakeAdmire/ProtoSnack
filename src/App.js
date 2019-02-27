@@ -39,7 +39,6 @@ export default class App extends Component {
     this.setState(state);
   }
   render() {
-    console.log(this.state.cardNumber);
     let cards = JSON.parse(localStorage.getItem('cardsArray'));
     if (this.state.cards.length > 0 && this.state.prototypes.length > 0) {
       if (localStorage.getItem('cardsArray')) { 
