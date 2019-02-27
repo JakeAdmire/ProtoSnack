@@ -40,5 +40,10 @@ describe('Welcome', () => {
     expect(wrapper.state('firstTime')).toEqual(false);
   })
 
+  it('should call resetState when storeName is invoked', () => {
+    wrapper.instance().storeName({preventDefault: jest.fn()});
+    expect(resetStateMock).toBeCalled();
+  })
+
 })
 
