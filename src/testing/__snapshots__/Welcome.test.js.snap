@@ -1,0 +1,522 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Welcome
+    cards={
+      Array [
+        Object {},
+        Object {},
+        Object {},
+      ]
+    }
+    resetState={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="welcome"
+      >
+        <div
+          className="title"
+        >
+          <h1>
+            Welcome to 
+            <span>
+              ProtoSnack!
+            </span>
+          </h1>
+          <h3>
+            We see that this is your first time here!
+          </h3>
+        </div>
+        <p>
+          ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!
+        </p>
+        <p>
+          ProtoSnack will remember your progress for you, so feel free to relax and study!
+        </p>
+        <form
+          className="inputContainer"
+        >
+          <input
+            className="userSubmit"
+            onChange={[Function]}
+            placeholder="enter name here.."
+            type="text"
+          />
+          <button
+            className="submitName"
+            onClick={[Function]}
+          >
+            Submit
+          </button>
+        </form>
+      </div>,
+      "className": "screen",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="title"
+          >
+            <h1>
+              Welcome to 
+              <span>
+                ProtoSnack!
+              </span>
+            </h1>
+            <h3>
+              We see that this is your first time here!
+            </h3>
+          </div>,
+          <p>
+            ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!
+          </p>,
+          <p>
+            ProtoSnack will remember your progress for you, so feel free to relax and study!
+          </p>,
+          <form
+            className="inputContainer"
+          >
+            <input
+              className="userSubmit"
+              onChange={[Function]}
+              placeholder="enter name here.."
+              type="text"
+            />
+            <button
+              className="submitName"
+              onClick={[Function]}
+            >
+              Submit
+            </button>
+          </form>,
+        ],
+        "className": "welcome",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Welcome to 
+                <span>
+                  ProtoSnack!
+                </span>
+              </h1>,
+              <h3>
+                We see that this is your first time here!
+              </h3>,
+            ],
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Welcome to ",
+                  <span>
+                    ProtoSnack!
+                  </span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Welcome to ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ProtoSnack!",
+                  },
+                  "ref": null,
+                  "rendered": "ProtoSnack!",
+                  "type": "span",
+                },
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "We see that this is your first time here!",
+              },
+              "ref": null,
+              "rendered": "We see that this is your first time here!",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!",
+          },
+          "ref": null,
+          "rendered": "ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ProtoSnack will remember your progress for you, so feel free to relax and study!",
+          },
+          "ref": null,
+          "rendered": "ProtoSnack will remember your progress for you, so feel free to relax and study!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="userSubmit"
+                onChange={[Function]}
+                placeholder="enter name here.."
+                type="text"
+              />,
+              <button
+                className="submitName"
+                onClick={[Function]}
+              >
+                Submit
+              </button>,
+            ],
+            "className": "inputContainer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "userSubmit",
+                "onChange": [Function],
+                "placeholder": "enter name here..",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+                "className": "submitName",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="welcome"
+        >
+          <div
+            className="title"
+          >
+            <h1>
+              Welcome to 
+              <span>
+                ProtoSnack!
+              </span>
+            </h1>
+            <h3>
+              We see that this is your first time here!
+            </h3>
+          </div>
+          <p>
+            ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!
+          </p>
+          <p>
+            ProtoSnack will remember your progress for you, so feel free to relax and study!
+          </p>
+          <form
+            className="inputContainer"
+          >
+            <input
+              className="userSubmit"
+              onChange={[Function]}
+              placeholder="enter name here.."
+              type="text"
+            />
+            <button
+              className="submitName"
+              onClick={[Function]}
+            >
+              Submit
+            </button>
+          </form>
+        </div>,
+        "className": "screen",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="title"
+            >
+              <h1>
+                Welcome to 
+                <span>
+                  ProtoSnack!
+                </span>
+              </h1>
+              <h3>
+                We see that this is your first time here!
+              </h3>
+            </div>,
+            <p>
+              ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!
+            </p>,
+            <p>
+              ProtoSnack will remember your progress for you, so feel free to relax and study!
+            </p>,
+            <form
+              className="inputContainer"
+            >
+              <input
+                className="userSubmit"
+                onChange={[Function]}
+                placeholder="enter name here.."
+                type="text"
+              />
+              <button
+                className="submitName"
+                onClick={[Function]}
+              >
+                Submit
+              </button>
+            </form>,
+          ],
+          "className": "welcome",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                  Welcome to 
+                  <span>
+                    ProtoSnack!
+                  </span>
+                </h1>,
+                <h3>
+                  We see that this is your first time here!
+                </h3>,
+              ],
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Welcome to ",
+                    <span>
+                      ProtoSnack!
+                    </span>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Welcome to ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "ProtoSnack!",
+                    },
+                    "ref": null,
+                    "rendered": "ProtoSnack!",
+                    "type": "span",
+                  },
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "We see that this is your first time here!",
+                },
+                "ref": null,
+                "rendered": "We see that this is your first time here!",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!",
+            },
+            "ref": null,
+            "rendered": "ProtoSnack is an app for practicing your basic JavaScript string and array prototypes!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ProtoSnack will remember your progress for you, so feel free to relax and study!",
+            },
+            "ref": null,
+            "rendered": "ProtoSnack will remember your progress for you, so feel free to relax and study!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  className="userSubmit"
+                  onChange={[Function]}
+                  placeholder="enter name here.."
+                  type="text"
+                />,
+                <button
+                  className="submitName"
+                  onClick={[Function]}
+                >
+                  Submit
+                </button>,
+              ],
+              "className": "inputContainer",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "userSubmit",
+                  "onChange": [Function],
+                  "placeholder": "enter name here..",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Submit",
+                  "className": "submitName",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Submit",
+                "type": "button",
+              },
+            ],
+            "type": "form",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

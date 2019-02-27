@@ -6,6 +6,10 @@ export default class Main extends Component {
     super(props);
     this.state = { cardNumber: 0 };
   } 
+  increaseCardNumber = () => {
+    let num = this.state.cardNumber;
+    this.setState( {cardNumber: num++} );
+  }
   showNextCard = () => {
     if ((this.state.cardNumber + 1) < this.props.cards.length) {
       this.setState({cardNumber: this.state.cardNumber += 1});
@@ -26,10 +30,12 @@ export default class Main extends Component {
           frontContent={card}
           backContent={card.solutionPrototype}
           cardNumber={this.state.cardNumber}
+          resetState={this.props.resetState}
           nextCard={this.showNextCard}
           prevCard={this.showPrevCard}
           answers={this.props.answers}
           correctAnswer={this.props.correctAnswer}
+          increaseCardNumber={this.increaseCardNumber}
         />
       );
     })
