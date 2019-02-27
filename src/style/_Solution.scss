@@ -6,10 +6,10 @@
     border-radius: 20px;
     background: $pink;
     box-shadow: 4px 4px black;
-    color: white;
     transition: all .2s ease;
     @include boxGen(75px, 100%);
-    &:hover { background: darken($pink, 10%); color: white; }
+    @include customText(30px, 700, 'Open Sans', white, center, 3px);
+    &:hover { background: darken($pink, 10%); cursor: pointer; }
     &:active { opacity: 0.5; }
   }
 }

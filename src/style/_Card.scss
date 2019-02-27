@@ -30,10 +30,12 @@
       color: $babyBlue;
     }
   }
-  button {
+  .left,
+  .right {
     height: 50px;
     border: none;
     background: none;
+    opacity: 0.3;
     @include customText(30px, 700, 'Open Sans', $pink, center, 3px);
     span {
       background: url("./../media/arrow.svg");
@@ -41,11 +43,7 @@
       background-repeat: no-repeat;
       @include boxGen(50px, 50px);
     }
-    &:hover {
-      color: darken($pink, 10%);
-      cursor: pointer;
-    }
-    &:active { opacity: 0.5; }
+    &:hover { cursor: not-allowed; }
   }
   .left {
     @include position(absolute, -50px, initial, initial, -10px);
