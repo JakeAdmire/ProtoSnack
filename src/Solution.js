@@ -1,16 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-export default class Solution extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
+export default function Solution(props) {
+  return (
       <div className="solution">
-        <button onClick={this.props.showResults}>{this.props.answer}</button>
+        <button onClick={props.showResults}>{props.answer}</button>
       </div>
       )
-  }
 }

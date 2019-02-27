@@ -22,8 +22,7 @@ export default class Card extends Component {
     this.setState({showAnswer: false})
   }
   handleClick = (event) => {
-    console.log(event.target.innerText);
-    if (event.target.innerText == 'try again') { this.setState({showAnswer: false}); 
+    if (event.target.innerText === 'try again') { this.setState({showAnswer: false}); 
     } else { 
       this.props.nextCard();
       this.setState({showAnswer: false, attemptCorrect: false})
