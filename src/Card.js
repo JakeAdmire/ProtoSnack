@@ -47,7 +47,7 @@ export default class Card extends Component {
       return (
       <div className="card-back">
         <h2>{header}</h2>
-        <button onClick={this.handleClick}>{button}</button> 
+        <button className="back-button" onClick={this.handleClick}>{button}</button> 
       </div>
       ) 
     } else {
@@ -70,7 +70,7 @@ export default class Card extends Component {
         <button onClick={this.changeCards} className="right">SKIP
           <span></span>
         </button>
-        <span onClick={() => this.setState({showAnswer: !this.state.showAnswer})} className='card-counter'>{JSON.parse( localStorage.getItem('currNum') ) + 1}</span>
+        <span className='card-counter'>{JSON.parse( localStorage.getItem('currNum') ) + 1}</span>
         {this.generateCard()}
         <Answers  answers={this.props.answers}
                   correctAnswer={this.props.frontContent.solutionPrototype}
