@@ -31,8 +31,6 @@ ShallowWrapper {
         cardNumber={0}
         frontContent={Object {}}
         increaseCardNumber={[Function]}
-        nextCard={[Function]}
-        prevCard={[Function]}
         resetState={[MockFunction]}
       />,
       "className": "main",
@@ -49,8 +47,6 @@ ShallowWrapper {
         "correctAnswer": undefined,
         "frontContent": Object {},
         "increaseCardNumber": [Function],
-        "nextCard": [Function],
-        "prevCard": [Function],
         "resetState": [MockFunction],
       },
       "ref": null,
@@ -69,8 +65,6 @@ ShallowWrapper {
           cardNumber={0}
           frontContent={Object {}}
           increaseCardNumber={[Function]}
-          nextCard={[Function]}
-          prevCard={[Function]}
           resetState={[MockFunction]}
         />,
         "className": "main",
@@ -87,8 +81,6 @@ ShallowWrapper {
           "correctAnswer": undefined,
           "frontContent": Object {},
           "increaseCardNumber": [Function],
-          "nextCard": [Function],
-          "prevCard": [Function],
           "resetState": [MockFunction],
         },
         "ref": null,
