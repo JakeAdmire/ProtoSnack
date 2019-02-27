@@ -13,14 +13,6 @@ export default class Card extends Component {
       this.setState({attemptCorrect: false, showAnswer: true})
     }
   }
-  changeCards = (event) => {
-    if (event.target.classList.value === 'left') { 
-      this.props.prevCard() 
-    } else { 
-      this.props.nextCard() 
-    }
-    this.setState({showAnswer: false})
-  }
   handleClick = (event) => {
     if (event.target.innerText === 'try again') { this.setState({showAnswer: false}); 
     } else { 
@@ -64,10 +56,10 @@ export default class Card extends Component {
     let cardClass = this.state.showAnswer ? 'back' : '';
     return (
       <div className={`card ${cardClass}`}>
-        <button onClick={this.changeCards} className="left">PREVIOUS
+        <button disabled={true} className="left">PREVIOUS
           <span></span>
         </button>
-        <button onClick={this.changeCards} className="right">SKIP
+        <button disabled={true} className="right">SKIP
           <span></span>
         </button>
         <span className='card-counter'>{JSON.parse( localStorage.getItem('currNum') ) + 1}</span>

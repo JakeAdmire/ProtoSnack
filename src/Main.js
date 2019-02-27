@@ -10,18 +10,6 @@ export default class Main extends Component {
     let num = this.state.cardNumber;
     this.setState( {cardNumber: num++} );
   }
-  showNextCard = () => {
-    if ((this.state.cardNumber + 1) < this.props.cards.length) {
-      this.setState({cardNumber: this.state.cardNumber += 1});
-      this.props.resetState({cardNumber: this.state.cardNumber++});
-    }
-  }
-  showPrevCard = () => {
-    if (this.state.cardNumber !== 0) {
-      this.setState({cardNumber: this.state.cardNumber -= 1});
-      this.props.resetState({cardNumber: this.state.cardNumber--});
-    }
-  }
   generateCards = () => {
     const cards = this.props.cards;
     const cardsList = cards.map((card) => {
@@ -31,8 +19,6 @@ export default class Main extends Component {
           backContent={card.solutionPrototype}
           cardNumber={this.state.cardNumber}
           resetState={this.props.resetState}
-          nextCard={this.showNextCard}
-          prevCard={this.showPrevCard}
           answers={this.props.answers}
           correctAnswer={this.props.correctAnswer}
           increaseCardNumber={this.increaseCardNumber}

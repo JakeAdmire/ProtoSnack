@@ -4,7 +4,7 @@
   box-shadow: 4px 4px black;
   @include boxGen(250px, 800px);
   @include position(relative, 0, 0, 0, 0);
-  @include customText(initial, initial, 'Open Sans', #fff, center, 1px);
+  @include customText(initial, initial, 'Open Sans', #fff, center, 2px);
   .card-counter {
     background: darken($babyBlue, 30%);
     border-radius: 50%;
@@ -18,7 +18,7 @@
     @include flex(space-between, column, center);
     padding: 15px;
     h3:first-child { 
-      font-size: 30px;
+      font-size: 37px;
       margin: 0; 
     }
     .snippet {
@@ -30,22 +30,36 @@
       color: $babyBlue;
     }
   }
+  .card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    h2 { font-size: 50px; }
+  }
   button {
     height: 50px;
     border: none;
     background: none;
+    cursor: pointer;
+    transition: all .2s ease;
     @include customText(30px, 700, 'Open Sans', $pink, center, 3px);
+  }
+  .back-button {
+    color: white;
+    &:hover { color: darken(white, 10%); }
+    &:active { opacity: 0.5; }
+  }
+  .left,
+  .right {
+    opacity: 0.3;
     span {
       background: url("./../media/arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       @include boxGen(50px, 50px);
     }
-    &:hover {
-      color: darken($pink, 10%);
-      cursor: pointer;
-    }
-    &:active { opacity: 0.5; }
+    &:hover { cursor: not-allowed; }
   }
   .left {
     @include position(absolute, -50px, initial, initial, -10px);

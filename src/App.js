@@ -38,37 +38,49 @@ export default class App extends Component {
   resetState = (state) => {
     this.setState(state);
   }
-  render() {
+  generatePage = () => {
     let cards = JSON.parse(localStorage.getItem('cardsArray'));
-    if (this.state.cards.length > 0 && this.state.prototypes.length > 0) {
-      if (localStorage.getItem('cardsArray')) { 
-        return (
-          <div className="App">
-            <div className="donut">
-            </div>
-            <div>
-              <Header userName={this.state.userName}
-                      />
-              <Main cards={cards}
-                    answers={this.state.prototypes}
-                    resetState={this.resetState}
-                    correctAnswer={this.state.cards[this.state.cardNumber].solutionPrototype}
-                    />
-   
-            </div>
-          </div>
-        );
-      } else {
-        return (
-          <Welcome  resetState={this.resetState}
-                    cards={this.state.cards}
-                    />
-          )
-      }
-    } else {
-      return (
-        <div>loading</div>
-        )
+
+    let appendMain = ''
+    
+    if (cards) {
+      cards.length
+        ? appendMain = <Main  cards={cards}
+                              answers={this.state.prototypes}
+                              resetState={this.resetState}
+                              correctAnswer={this.state.cards[this.state.cardNumber].solutionPrototype}
+                              />
+        : appendMain = <div>No more cards..</div>;  
     }
+
+    let appendPage = 
+      localStorage.getItem('cardsArray')
+      ? <div className="App">
+              <div className="donut">
+              </div>
+              <div>
+                <Header userName={this.state.userName}
+                        />
+                { appendMain }
+              </div>
+            </div>
+      : <Welcome  resetState={this.resetState}
+                  cards={this.state.cards}
+                  />;
+
+    let loadPage = '' 
+    if (this.state.cards.length > 0 && this.state.prototypes.length > 0) {
+      loadPage = <div>{ appendPage }</div>
+    } else loadPage = <div>loading</div>
+
+    return loadPage;
+    
   }
+  render() {
+    return (
+      <div>
+      { this.generatePage() }
+      </div>
+      )
+    }
 }
