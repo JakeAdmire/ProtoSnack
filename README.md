@@ -1,49 +1,94 @@
-# Memoize -- ProtoSnack
-'Memoize' was assigned to be a flashcard style studying app. 
+###### Top
 
-I chose *string and array prototypes* as my topic of study and included a multiple-choice answer system.
+<br />
+<p align="center">
+  <h1 align="center">ProtoSnack</h1>
+  <p align="center">
+    A sugary sweet way to memorize JavaScript string & array prototype methods!
+  </p>
+</p>
+<div align="center">
 
-You can learn more about the assignment spec by following [this link.](http://frontend.turing.io/projects/memoize.html)
+[![LinkedIn][linkedin-shield]][linkedin-url] [![Gmail][gmail-shield]][gmail-url] [![GitHub][github-shield]][github-url]
+</div>
 
-### Contact Info
-Credit for the project goes to:
-- Jacob Admire: [GitHub](https://github.com/JakeAdmire), 
-                [Email](mailto:JakeAdmire1@gmail.com),
-                [LinkedIn](https://www.linkedin.com/in/jakeadmire)
 
-#### Design
-For the user interface I chose a snack / bakery theme. I had been feeling tired of my history of dark themes and decided to try something new. It was definitely challenging to move outside of my comfort zone and try new things but I do feel stronger for it.
-               
-### Screenshots of Project
- ![Screenshot 1](./src/screenshots/screenshot1.png)
- ![Screenshot 2](./src/screenshots/screenshot2.png)
- ![Screenshot 3](./src/screenshots/screenshot3.png)
- ![Screenshot 4](./src/screenshots/screenshot4.png)
+> INFO: ProtoSnack utilizes a database that is no longer supported by the host and thus is temporarily non-functional.
 
-### Specific things learned:
-I've repeatedly been told that certain lists need keys assigned to them in React. I never understood what this meant until I discovered the code to specifically assign keys to list objects
-```
-  keys={index}
-```
-### Challenges faced:
-Truly having a grasp of **data-down, actions-up** has been very challenging for me. I originally ended up setting my components up wrong and being unable to pass the correct events that I needed to. After refactoring I feel I have a much better grasp of it.
+## Table of Contents
 
-### Future Implementation Plans
-- I ended up having to disable the flashcard 'SKIP' and 'PREVIOUS' buttons due to bugs. I'd like to re-enable them in the future and fix that functionality
-- Issues have been made for styling the 'loading' and 'no more cards' pages.
-- I'd like to add a reset button after the user completes all the cards.
+- [About The Project](#About-The-Project)
+  - [Media](#Media)
+  - [Built With](#Built-With)
+- [Getting Started](#Getting-Started)
+  - [Prerequisites](#Prerequisites)
+  - [Installation](#Installation)
+- [Contributors](#Contributors)
+- [Assignment Details](#Assignment-Details)
 
-### Tools Used to Build Project
-[Sublime Text Editor](https://www.sublimetext.com/)
-
-[React](https://reactjs.org/)
-
-[Enzyme](https://airbnb.io/enzyme/) & [Jest](https://airbnb.io/enzyme/docs/guides/jest.html)
-
-## Credits
-Credit for this project goes to [Jake Admire](https://github.com/JakeAdmire)
+## About The Project
+  
+:cake: **ProtoSnack** provides a tasty way to practice your JavaScript string & array prototype methods in a flashcard style layout!
 
 ---
-This project was assigned by Brittany Storoz, Pamela Lovett, and Robbie Jaeger 
 
-*@ Turing School of Software and Design, Denver, CO.*
+### Media:
+
+![full page screenshot](https://github.com/JakeAdmire/JA--Memoize/blob/master/src/screenshots/screenshot2.png?raw=true)
+
+### Built With:
+- HTML5
+- SCSS 
+- JavaScript
+- jQuery
+- Jest & Enzyme
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+---
+
+### Prerequisites
+
+* npm
+```sh
+npm install npm@latest -g
+```
+
+---
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/JakeAdmire/ProtoSnack
+```
+2. Install NPM packages
+```sh
+cd ProtoSnack && npm install
+```
+
+## Assignment Details
+
+The intended assignment was to provide a proof of understanding of the React component lifecycle. 
+
+---
+
+This project was assigned by Brittany Storoz, Pamela Lovett, and Robert Jaeger
+
+_@ Turing School of Software & Design, Denver, CO._
+
+---
+
+**[BACK TO TOP](#top)**
+
+<!-- URL References  -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-0077b5.svg?style=for-the-badge&logo=linkedin
+[linkedin-url]: https://linkedin.com/in/jakeadmire
+
+[gmail-shield]: https://img.shields.io/badge/-Email-red.svg?style=for-the-badge&logo=gmail&logoColor=white
+[gmail-url]: https://mailto:jakeadmire1@gmail.com
+
+[github-shield]: https://img.shields.io/badge/dynamic/json?label=Follow&query=length&url=https://api.github.com/users/jakeadmire/followers&style=for-the-badge&logo=github
+[github-url]: https://mailto:jakeadmire1@gmail.com
